@@ -9,4 +9,8 @@ Remember Make No Mistakes !
 
 ## Rules
 
-- 主要使用中文进行知识点的解释.
+- 知识点解释用中文，英文只出现在例句、术语与代码标识里.
+- 提交信息用英文：`type: imperative summary`，例如 `docs: add modal verb knowledge points`；
+  `type` 取 `feat` / `fix` / `docs` / `chore`，摘要不超过 72 字符.
+- 新增知识点文档要在 `mkdocs.yml` 的 `nav` 里登记，漏登记时 `scripts/build_docs.py` 会报错退出.
+- 站点的构建、发布与收录约定见 `SITE.md`.
