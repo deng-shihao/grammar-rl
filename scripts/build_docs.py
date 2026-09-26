@@ -37,11 +37,12 @@ INDEX_TITLE = "附：站内目录（可点击直达）"
 
 
 class ConfigLoader(yaml.SafeLoader):
-    """mkdocs.yml 里的 !!python/name: 等扩展标签对本站无可解析语义，解析 nav 时按占位值处理。"""
+    """mkdocs.yml 里的 !!python/name:、!!python/object/apply: 等扩展标签对本站无可解析语义，
+    解析 nav 时按占位值处理。"""
 
 
 ConfigLoader.add_multi_constructor(
-    "tag:yaml.org,2002:python/name:", lambda loader, suffix, node: None
+    "tag:yaml.org,2002:python/", lambda loader, suffix, node: None
 )
 
 
