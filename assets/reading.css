@@ -45,3 +45,17 @@
 .md-typeset p {
   margin-block: 0.6em;
 }
+
+/* 手机竖屏（与 Material 的 44.984375em 断点一致）：恢复主题默认字号，
+   正文 16px、表内 14.4px，避免把桌面端的紧凑密度带到小屏上。
+   根字号是 125%，故 0.8rem = 16px、0.72rem = 14.4px。 */
+@media screen and (max-width: 44.984375em) {
+  .md-typeset {
+    font-size: 0.8rem;
+    line-height: 1.7;
+  }
+
+  .md-typeset table:not([class]) {
+    font-size: 0.72rem;
+  }
+}
