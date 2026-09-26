@@ -1,0 +1,16 @@
+# 本地语料抽取工作区（由 EPUB 自动解包生成，可随时删除重建，不入库）
+work/
+
+# 电子书原文件（版权原因不入库）
+*.epub
+
+# 站点构建产物与本地虚拟环境
+build/
+.venv/
+
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.pyc

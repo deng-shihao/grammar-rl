@@ -1,0 +1,47 @@
+/* 阅读体验调整：中文正文的宽度、行距与表格排版。
+   正文以表格为主（规则表、考点表、真题表），因此重点保证宽表可读。 */
+
+.md-grid {
+  max-width: 1440px;
+}
+
+.md-typeset {
+  font-size: 0.72rem;
+  line-height: 1.75;
+}
+
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3 {
+  font-weight: 650;
+}
+
+/* Material 默认把表格渲染为 inline-block，会因行内盒无外边距而贴左，这里改回块级并居中。 */
+.md-typeset table:not([class]) {
+  display: table;
+  margin-inline: auto;
+  font-size: 0.66rem;
+}
+
+.md-typeset table:not([class]) th {
+  text-align: center;
+}
+
+.md-typeset table:not([class]) td {
+  vertical-align: top;
+}
+
+/* 长英文条目、URL 与中文混排时允许任意断行，避免撑破正文列。 */
+.md-typeset a,
+.md-typeset code {
+  overflow-wrap: anywhere;
+}
+
+.md-content {
+  min-width: 0;
+}
+
+/* 真题题干与解析多为长段落，段间距略收一点，便于整页扫读。 */
+.md-typeset p {
+  margin-block: 0.6em;
+}

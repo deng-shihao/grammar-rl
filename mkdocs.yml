@@ -1,0 +1,101 @@
+site_name: 成人学士学位英语 · 知识点整理（词汇语法）
+site_description: 成人高等教育学士学位英语（学位英语）备考笔记：200 道词汇语法真题逐题解析、22 篇知识点、大纲对照表与自测卷
+site_url: https://deng-shihao.github.io/grammar-rl/
+repo_url: https://github.com/deng-shihao/grammar-rl
+repo_name: deng-shihao/grammar-rl
+# 正文由 scripts/build_docs.py 从仓库原始文件复制而来，页面源码路径与仓库路径一致，
+# 但 index.md 对应 README.md，无法统一映射到编辑地址，故不显示“编辑此页”。
+edit_uri: ""
+
+docs_dir: build/docs
+site_dir: build/site
+use_directory_urls: false
+
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.tracking
+    - navigation.top
+    - navigation.footer
+    - toc.follow
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+  palette:
+    - scheme: default
+      primary: blue grey
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: 切换深色模式
+    - scheme: slate
+      primary: blue grey
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: 切换浅色模式
+
+plugins:
+  - search:
+      lang: [zh, en]
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - footnotes
+  - tables
+  - sane_lists
+  - pymdownx.superfences
+  - toc:
+      permalink: true
+      # 与 uslugify 等价但不再触发弃用警告：保留中文标题原样、英文转小写
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+
+extra_css:
+  - assets/reading.css
+
+validation:
+  links:
+    anchors: info
+
+nav:
+  - 首页: index.md
+  - 大纲与规律:
+      - 01 官方考试大纲与解读: 大纲/01-官方考试大纲与解读.md
+      - 02 词汇语法命题规律: 大纲/02-词汇语法命题规律.md
+      - 03 语法覆盖对照表: 大纲/03-语法覆盖对照表.md
+  - 真题资料:
+      - 01 词汇语法分类索引（200 题）: 真题/01-词汇语法分类索引.md
+      - 02 原书疑误勘正: 真题/02-原书疑误勘正.md
+      - 03 完形填空词汇语法考点: 真题/03-完形填空词汇语法考点.md
+  - 知识点（词汇语法）:
+      - 01 动词时态与语态: 知识点-词汇语法/01-动词时态与语态.md
+      - 02 虚拟语气: 知识点-词汇语法/02-虚拟语气.md
+      - 03 非谓语动词: 知识点-词汇语法/03-非谓语动词.md
+      - 04 情态动词: 知识点-词汇语法/04-情态动词.md
+      - 05 主谓一致: 知识点-词汇语法/05-主谓一致.md
+      - 06 名词性从句: 知识点-词汇语法/06-名词性从句.md
+      - 07 定语从句: 知识点-词汇语法/07-定语从句.md
+      - 08 状语从句与连词: 知识点-词汇语法/08-状语从句与连词.md
+      - 09 倒装与强调句: 知识点-词汇语法/09-倒装与强调句.md
+      - 10 冠词、限定词与代词: 知识点-词汇语法/10-冠词、限定词与代词.md
+      - 11 介词与介词短语: 知识点-词汇语法/11-介词与介词短语.md
+      - 12 名词词义辨析: 知识点-词汇语法/12-名词词义辨析.md
+      - 13 形容词与副词（含比较结构）: 知识点-词汇语法/13-形容词与副词（含比较结构）.md
+      - 14 动词词义辨析: 知识点-词汇语法/14-动词词义辨析.md
+      - 15 短语动词: 知识点-词汇语法/15-短语动词.md
+      - 16 固定搭配与习语: 知识点-词汇语法/16-固定搭配与习语.md
+      - 17 情景交际用语: 知识点-词汇语法/17-情景交际用语.md
+      - 18 构词法与词形变化: 知识点-词汇语法/18-构词法与词形变化.md
+      - 19 名词的数与格: 知识点-词汇语法/19-名词的数与格.md
+      - 20 代词与 it 的用法: 知识点-词汇语法/20-代词与it的用法.md
+      - 21 基本句型与 there be、it 句型: 知识点-词汇语法/21-基本句型与there be、it句型.md
+      - 22 省略、替代、平行与否定: 知识点-词汇语法/22-省略、替代、平行与否定.md
+  - 练习与自测:
+      - 01 词汇语法综合自测卷（40 题）: 练习/01-词汇语法综合自测卷.md
+  - 参考资料:
+      - 01 考试大纲与政策现状: research/01-考试大纲与政策现状.md
+      - 02 词汇语法考点与权威依据: research/02-词汇语法考点与权威依据.md
